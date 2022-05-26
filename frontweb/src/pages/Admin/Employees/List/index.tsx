@@ -1,14 +1,14 @@
 import { AxiosRequestConfig } from 'axios';
 import { useEffect, useState } from 'react';
-import Pagination from 'components/Pagination';
-import EmployeeCard from 'components/EmployeeCard';
 import { Link } from 'react-router-dom';
 import { SpringPage } from 'types/vendor/spring';
 import { Employee } from 'types/employee';
 import { requestBackend } from 'util/requests';
+import { hasAnyRoles } from "util/auth";
+import Pagination from 'components/Pagination';
+import EmployeeCard from 'components/EmployeeCard';
 
 import './styles.css';
-import { hasAnyRoles } from "util/auth";
 
 type ControlComponentsData = {
   activePage: number;
